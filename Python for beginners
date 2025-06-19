@@ -1,0 +1,117 @@
+# 🚀 20 Beginner Python Examples in One File
+
+# 1. Hello World
+print("1. Hello, World!")
+
+# 2. Variables and Data Types
+name = "Prem"
+age = 20
+height = 5.8
+print("\n2. Name:", name, "Age:", age, "Height:", height)
+
+# 3. Basic Math
+a = 10
+b = 5
+print("\n3. Sum:", a + b, "Difference:", a - b, "Product:", a * b, "Division:", a / b)
+
+# 4. If-Else Statement
+print("\n4. If-Else Statement")
+if age >= 18:
+    print("You are an adult.")
+else:
+    print("You are a minor.")
+
+# 5. For Loop
+print("\n5. For Loop (1 to 5):")
+for i in range(1, 6):
+    print(i, end=' ')
+
+# 6. While Loop
+print("\n\n6. While Loop (5 to 1):")
+count = 5
+while count > 0:
+    print(count, end=' ')
+    count -= 1
+
+# 7. Function Definition
+def greet(user):
+    return f"Hello, {user}!"
+
+print("\n\n7. Function:", greet(name))
+
+# 8. List and Loop
+fruits = ["apple", "banana", "cherry"]
+print("\n8. Fruits List:")
+for fruit in fruits:
+    print(fruit)
+
+# 9. List Operations
+numbers = [1, 2, 3, 4, 5]
+print("\n9. List Sum:", sum(numbers), "Max:", max(numbers), "Min:", min(numbers))
+
+# 10. Dictionary Usage
+person = {"name": "Prem", "age": 20}
+print("\n10. Dictionary Access:", person["name"], "-", person.get("age"))
+
+# 11. Taking Input (uncomment to use)
+# user_input = input("11. Enter something: ")
+# print("You entered:", user_input)
+
+# 12. String Operations
+message = "python is fun"
+print("\n12. Uppercase:", message.upper(), " | Title Case:", message.title())
+
+# 13. Even or Odd
+number = 7
+print("\n13. Number is Even" if number % 2 == 0 else "13. Number is Odd")
+
+# 14. Find Factorial (using loop)
+fact = 1
+n = 5
+for i in range(1, n+1):
+    fact *= i
+print("\n14. Factorial of 5:", fact)
+
+# 15. Fibonacci Series
+print("\n15. First 10 Fibonacci Numbers:")
+a, b = 0, 1
+for _ in range(10):
+    print(a, end=' ')
+    a, b = b, a + b
+
+# 16. Prime Number Checker
+num = 11
+is_prime = all(num % i != 0 for i in range(2, int(num**0.5)+1))
+print("\n\n16. Prime Check: 11 is Prime?" , is_prime)
+
+# 17. List Comprehension
+squares = [x**2 for x in range(1, 6)]
+print("\n17. Squares using List Comprehension:", squares)
+
+# 18. Try-Except for Error Handling
+print("\n18. Error Handling Example:")
+try:
+    print(10 / 0)
+except ZeroDivisionError:
+    print("Cannot divide by zero.")
+
+# 19. Class and Object
+print("\n19. Class and Object Example:")
+class Student:
+    def __init__(self, name):
+        self.name = name
+
+    def display(self):
+        print("Student Name:", self.name)
+
+s = Student("Prem")
+s.display()
+
+# 20. File Writing and Reading
+print("\n20. File Write & Read:")
+with open("sample.txt", "w") as f:
+    f.write("This is a sample file.\nPython is awesome!")
+
+with open("sample.txt", "r") as f:
+    content = f.read()
+    print("File Content:", content)
